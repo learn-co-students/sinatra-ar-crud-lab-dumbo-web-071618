@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+h1 {
+    border-style: solid;
+    border-color: blue;
+    background-color: yellow;
+
+}
+
+p {
+    border-style: solid;
+    border-color: coral;
+    background-color: pink;
+}
+</style>
+</head>
+
+<body>
+
+<h1> <%= @new_post.name %> </h1>
+
+  <p> <%= @new_post.content %> </p>
+
+<br>
+<br>
+  <form action="/posts/<%= @new_post.id %>/edit">
+    <input type="submit" value="Edit This Post">
+  </form>
+
+<br>
+<br>
+
+<form method="POST" action="/posts/<%= @new_post.id %>">
+  <input id ="hidden" type="hidden" name="_method" value="delete">
+  <input id="delete" type="submit" value="Delete This Post">
+</form>
+<br>
+<br>
+<form action="/">
+  <input type="submit" value="Main Page">
+</form>
+
+</body>
+</html>

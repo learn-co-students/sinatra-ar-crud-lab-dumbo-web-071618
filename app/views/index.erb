@@ -1,0 +1,10 @@
+<h1>The Most Amazing Blog in the World</h1>
+
+<% @posts.each do |post| %>
+  <ul>
+  <li>
+  <a href="/posts/<%= post.id %>"><%= post.name %></a>
+  <br>
+<%= post.content %></li>
+ </ul>
+  <% end %>
