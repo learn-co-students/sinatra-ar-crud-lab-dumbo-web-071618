@@ -1,0 +1,10 @@
+<h1>"blog blog blog blog blog"</h1>
+<br>
+<br>
+<ul>
+<%@posts.each do |post|%>
+    <li>
+        <a href=<%="/posts/#{post.id}"%>><%=post.name%></a>&emsp;<a href=<%="/posts/#{post.id}/edit"%>>Edit</a>
+    </li>
+<%end%>
+</ul>
