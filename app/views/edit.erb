@@ -1,0 +1,40 @@
+<style>
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+.red{
+    background-color: #f44336;
+}
+
+.green{
+    background-color: #4CAF50;
+}
+</style>
+
+<form action="/posts/<%=@post.id%>" method="POST" id="edit_form">
+    <input type="hidden" name="_method" id="hidden" value="patch">
+    <p><h3>Blog Name:<%="\t"%><input type="text" name="name" value="<%=@post.name%>"></h3></p>
+    <br>
+    <br>
+    <textarea rows="20" cols="100" form="edit_form" name="content">
+    <%=@post.content%>
+    </textarea>
+    <br>
+    <br>
+    <input type="submit" id="submit" class="button green" value="SUBMIT">
+</form>
+
+<form action="/posts/<%=@post.id%>" method="POST" id="delete_form">
+    <input type="hidden" name="_method" id="hiddend" value="DELETE">
+    <input type="submit" id="delete" class="button red" value="delete">
+</form>

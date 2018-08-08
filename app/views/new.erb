@@ -1,0 +1,11 @@
+<h1>Create a New Blog Post</h1>
+
+<form action="/posts" method="POST" id="new_form">
+<p><h3>Blog Name:<%="\t"%><input type="text" name="name"></h3></p>
+<p><h3>Blog Content:</h3></p>
+<textarea rows="20" cols="100" form="new_form" name="content">
+</textarea>
+<br>
+<br>
+<input type="submit" id="submit">
+</form>
