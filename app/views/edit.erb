@@ -1,0 +1,7 @@
+<h1> Edit a book </h1>
+<form action = "/posts/<%= @post.id%>" method = "POST">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<h3> Post name: <input id = "name" type = "text" name = "post[name]" value = "<%= @post.name %>" ></h3>
+<h3> Post content: <input id = "content" type = "text" name = "post[content]" value = "<%= @post.content %>"></h3>
+<input type = "submit" id = "submit">
+</form>
